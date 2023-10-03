@@ -37,8 +37,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // backend api / client url
   var CLIENT_URL = "http://localhost:3000";
-  // var CLIENT_URL = "https://gb-video-record.netlify.app/";
-  // var API_BASE_URL = `https://seashell-app-4jicj.ondigitalocean.app/api`;
+  var CLIENT_URL = "https://gb-video-record.netlify.app/";
+  var API_BASE_URL = `https://seashell-app-4jicj.ondigitalocean.app/api`;
   var API_BASE_URL = `http://localhost:8080/api`;
 
   // recording components
@@ -331,7 +331,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     if (!streamRequestEnded) {
       await endStream(hmo_streamVideoId);
       streamRequestEnded = true;
-      window.open(`${CLIENT_URL}/file/${hmo_streamVideoId}`);
+      window.open(`${CLIENT_URL}/video/${hmo_streamVideoId}`);
       await sleep(1);
       window.location.reload();
     }
