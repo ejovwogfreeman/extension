@@ -331,7 +331,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     if (!streamRequestEnded) {
       await endStream(hmo_streamVideoId);
       streamRequestEnded = true;
-      window.open(`${CLIENT_URL}/video/${hmo_streamVideoId}`);
+      window.open(`${CLIENT_URL}video/${hmo_streamVideoId}`);
       await sleep(1);
       window.location.reload();
     }
